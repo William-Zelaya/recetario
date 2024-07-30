@@ -1,0 +1,355 @@
+/** pseudoclase, asigna variables predefinidos */
+:root{
+    --color-primario: #ff7b00;
+    --color-secundario: #a26e3e;
+    --blanco: #fff;
+}
+
+/**Selector universal */
+*{
+    margin: 0;
+    padding: 0;
+    /** manejamos mque las cajitas no se sobrepasen del contenedor*/
+    box-sizing: border-box;
+}
+
+nav{
+    text-align: center;
+}
+ 
+nav ul li{
+    /** los elementos en bloque los pone en linea */
+    display: inline-block;
+    list-style: none;
+    margin: .6rem; /**1rem= 16px*/
+
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+.seccion-restaurante{
+    background-image: url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image1_jcpygh.jpg");
+    width: 100%;
+    height: 600px;
+    /** indicamos que el contenido se adapte al contenedor y se reposicione hacia abajo (la imagen)
+*/
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /** combina dos propiedades flex-direction y flex-wrap indicamos la orientacion de los elementos */
+    flex-flow: column nowrap;
+    /** propiedad para recortar la imagen*/
+    /**
+    0,0 => superior izquierda
+    100,0=> superior derecha
+    100,80=> borde inferior de la derecha
+    0,100=> borde inferior izquierdo
+    */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    
+}
+.titulo{
+    color: var(--blanco);
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+.subtitulo{
+    color: var(--blanco);
+    font-size: 2rem;
+    letter-spacing: .7rem;
+    font-weight: 400;
+    
+    
+}
+
+.caja{
+    width: 80%;
+    margin: auto;
+}
+.nosotros{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+
+
+}
+.nosotros-imagen{
+    position: relative;
+    flex: 0 0 400px;
+    /** flex-grow: definimos la capacida de como va a crecer el elemento
+    flex-shrink: definimos la capacidad de como va a disminuir el elemento
+    flex-basis: definimos el tamaño inicial del elemento
+    */
+
+}
+.nosotros-imagen img{
+    width: 100%;
+    height: 300px;
+/** adaptamos la imagen a su contenedor
+*/
+    object-fit: cover;
+    box-shadow: 0 0 10px 2px
+    var(--color-secundario);
+    transition: all .2s;
+/**anidamos el elemento hover*/
+    &:hover{
+        transform: scale(1.1);
+
+    }
+}
+.nosotros-contenido{
+    flex: 0 0 50%;
+}
+/** estilos para el texto*/
+h2{
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h4{
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #444;
+    font-weight: 400;
+}
+span{
+    color: var
+    (--color-primario);
+}
+
+.nosotros-contenido p{
+    line-height: 3rem;
+    color: #666;
+}
+.seccion-oferta{
+    position: relative;
+    background: url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image3_ulstmf.jpg");
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    color: var(--blanco);
+}
+
+.btn{
+    width: 170px;
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: var(--color-primario);
+}
+.btn-oferta{
+    background-color: var(--color-secundario);
+}
+.btn-menu{
+    background-color: var(--color-secundario);
+}
+
+/** apartado de menu **/
+.menu-hamburguesa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.menu-tarjeta{
+    width:30%;
+    height: 300px;
+    box-shadow: 0 0 10px  5px;
+    margin-bottom: 30px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    
+}
+
+.menu-tarjeta:nth-child(1){
+    background-image: url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574754/practicas/hamburguesa/product1_loak4u.jpg");
+}
+.menu-tarjeta:nth-child(2){
+    background-image: url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/product2_sgcwng.jpg");
+}
+
+.menu-tarjeta:nth-child(3){
+    background-image: url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/product3_rhoyoi.jpg");
+}
+.menu-tarjeta:nth-child(4){
+    background-image: url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574754/practicas/hamburguesa/product4_vwkcmh.jpg");
+}
+.menu-tarjeta:nth-child(5){
+    background-image: url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574754/practicas/hamburguesa/product5_ugbrat.jpg");
+}
+.menu-tarjeta:nth-child(6){
+    background-image: url("https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574754/practicas/hamburguesa/product6_f6gyfk.jpg");
+}
+.tarjeta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transition: all .5s;
+}
+.menu-tarjeta:hover .tarjeta{
+    opacity: 1;
+}
+h5{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-primario);
+    padding: 10px 0 0 0;
+}
+.btn-tarjeta{
+    background-color: var
+    (--color-secundario);
+}
+
+/**Efecto Oscuro*/
+.seccion-restaurante::before, .seccion-oferta::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+.seccion-restaurante *, .seccion-oferta *{
+    position: relative;
+}
+.espacio{
+    /** aplica 100px arriba y abajo*/
+    padding: 100px 0;
+}
+
+/** USO DE MEDIA QUERY*/
+@media (max-width: 576px){
+    .menu-tarjeta{
+        width: 100%;
+    }
+
+    .titulo{
+        font-size: 2.5rem;
+    }
+    .subtitulo{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    }
+  
+@media(max-width: 768px){
+ .nosotros-contenido{
+    flex: 0 0  100%;
+ }
+
+ .nosotros-imagen{
+    flex: 0 0 100%;
+ }
+
+ }
+
+ .footer {
+    background-color: #87CEFA; /* Azul claro */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0.5em 0;
+}
+
+.social-icons {
+    margin-top: 1em;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); /* Cambiar el color del icono a blanco */
+}
+
+.contact-section {
+    background-color: #76b0e0;
+    padding: 2em;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    flex: 0 0 150px; /* Ancho fijo para las etiquetas */
+    margin-right: 1em;
+    text-align: center;
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1; /* Ocupa el resto del espacio */
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #87CEFA; /* Azul claro */
+}
+ @media (max-width: 576px){
+    .form-group label {
+        flex: 100%;
+ }
+ .form-group textarea{
+    flex: 100%;
+ } 
+ }
+
+
+
+/**
+nav a {
+margin: .6rem;
+text-decoration: none;
+}/*
+

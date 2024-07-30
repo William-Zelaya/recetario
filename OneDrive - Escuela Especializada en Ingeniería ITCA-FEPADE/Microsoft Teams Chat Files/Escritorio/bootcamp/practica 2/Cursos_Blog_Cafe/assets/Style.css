@@ -1,0 +1,260 @@
+/* Pseudoclase, asigna variables predefinidas */
+:root {
+    --color-primario: #ff7b00;
+    --color-secundario: #a26e3e;
+    --blanco: #fff;
+}
+
+/* Selector universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    gap: .5rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+/* Estilos para el contenedor principal */
+.encabezado-imagen {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background-image: url("https://res.cloudinary.com/dsrkdnu5y/image/upload/v1721287223/banner_acnow4.jpg");
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--blanco);
+    position: relative;
+}
+
+.caption {
+    background-color: #00000080;
+    color: white;
+    padding: 0 1rem;
+    width: 20%;
+    text-align: left;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+.central-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según sea necesario */
+    background-image: url("https://res.cloudinary.com/dsrkdnu5y/image/upload/v1721287223/banner_acnow4.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.contenido-centro {
+    margin-top: 10px; /* Ajusta este valor según sea necesario */
+}
+
+.titulo {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+/* Estilos para la sección principal */
+.main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center; /* Centra el contenedor dentro del main */
+}
+
+.producto-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--fondo-contenedor); /* Color de fondo para el contenedor */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Ajusta el ancho máximo si es necesario */
+    width: 100%;
+}
+
+.producto-imagen img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-titulo {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.producto-precio {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.producto-cupo {
+    font-size: 1rem;
+    color: var(--color-primario);
+}
+
+a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
+
+main h2 {
+    text-align: center; /* Centra el título horizontalmente */
+    margin-bottom: 4rem; /* Espacio entre el título y la tabla */
+    color: var(--color-secundario); /* Ajusta el color si lo deseas */
+    margin-top: 2rem;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    max-width: 1200px; /* Ajusta según el diseño */
+    border-collapse: collapse;
+    background-color: var(--fondo-tabla); /* Color de fondo de la tabla */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: 0rem; /* Espacio entre el título y la tabla */
+    margin-left: auto;/*cenytra la tabla horizontalmente*/
+    margin-right: auto;/*cenytra la tabla horizontalmente*/ 
+}
+
+th, td {
+    border: 1px solid var(--borde-tabla); /* Color del borde de la tabla */
+    padding: 8px;
+    text-align: center;
+    ;
+}
+
+th {
+    background-color: var(--color-primario); /* Color de fondo de los encabezados */
+    color: var(--blanco); /* Color del texto en los encabezados */
+    font-weight: bold;
+}
+
+td img {
+    max-width: 100px; /* Tamaño máximo para las imágenes */
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+.imagen-curso {
+    width: 100px; /* Ajusta el tamaño del contenedor de la imagen */
+    height: 100px; /* Ajusta el tamaño del contenedor de la imagen */
+    background-size: cover; /* Ajusta la imagen para que cubra el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+/* Estilos para las celdas de la tabla que contienen imágenes */
+.imagen-curso {
+    width: 100px; /* Ajusta el tamaño del contenedor de la imagen */
+    height: 100px; /* Ajusta el tamaño del contenedor de la imagen */
+    background-size: cover; /* Ajusta la imagen para que cubra el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+/* Asigna una imagen específica a cada clase */
+.imagen-1 {
+    background-image: url("https://res.cloudinary.com/dsrkdnu5y/image/upload/v1721287222/curso1_spbbks.jpg");
+}
+
+.imagen-2 {
+    background-image: url("https://res.cloudinary.com/dsrkdnu5y/image/upload/v1721287222/curso2_syihvd.jpg");
+}
+
+.imagen-3{
+    background-image: url("https://res.cloudinary.com/dsrkdnu5y/image/upload/v1721287222/curso3_vmd3lz.jpg");
+}
+
+/* Estilos para las celdas de la tabla que contienen imágenes */
+.imagen-curso {
+    width: 100px; /* Ajusta el tamaño del contenedor de la imagen */
+    height: 100px; /* Ajusta el tamaño del contenedor de la imagen */
+    background-size: cover; /* Ajusta la imagen para que cubra el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative;
+}
+.imagen-curso::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: var(--color-secundario);
+    position: absolute;
+    bottom: 0; /* Ajusta esto según sea necesario */
+    left: 0;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para la tabla */
+    border-collapse: collapse;
+    margin: 2rem auto; /* Centro la tabla horizontalmente y agrega margen */
+}
+
+th, td {
+    border: 1px solid var(--borde-tabla); /* Color del borde de la tabla */
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--color-primario); /* Color de fondo de los encabezados */
+    color: var(--blanco); /* Color del texto en los encabezados */
+    font-weight: bold;
+}

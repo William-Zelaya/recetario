@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<style>
+    /** diseño a la pagina */
+</style>
+<body>
+    <!--encabezado-->
+    <header class="encabezado" id="encabezado">
+        <!--menu de navegacion-->
+        <nav>
+            <!--lista desordenada-->
+            <ul>
+             <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#"class="nav-link">Nosotros</a></li>
+            <li><a href="#"class="nav-link">Menu</a></li>
+            <li><a href="#"class="nav-link">Contacto</a></li> 
+           </ul> 
+        </nav>
+    </header>
+    <main class="encabezado" id="contenedor-principal">
+        <section class="seccion-restaurante espacio">
+            <h1 class="titulo">RESTAURANTE</h1>
+            <H3 class="subtitulo">Experiencia a la mejor comida</H3>
+        </section>
+        <!--apartado de nosotros-->
+        <section class="seccion-nosotros caja espacio">
+            <h2>Nosotros</h2>
+            <section class="nosotros">
+                <div class="nosotros-contenido">
+                    <h4>Este es <span>Nuestro Restaurante</span></h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem incidunt a nesciunt. Fuga, debitis nobis.                    </p>
+                </div>
+                <div class="nosotros-imagen">
+                    <img src="https://res.cloudinary.com/dmddi5ncx/image/upload/v1720574753/practicas/hamburguesa/image2_fut2k2.jpg" alt="logo hamburguesa">
+                </div>
+        </section>
+    </section>
+    <!--apartado de ofertas-->
+        <section class="seccion-oferta espacio caja">
+            <h2>LOS MEJORES PRODUCTOS</h2>
+            <P>En este restaurante puedes disfrutar de las mejores hamburguesas que mas te fascinen .</P>
+            <button class="btn btn-oferta">Ordenar ahora</button>
+        </section>
+        <!--apartado de menu-->
+
+        <section class="espacio caja">
+            <h2>Menu</h2>
+            <!--contenedor de para el menu amburguesa-->
+            <section class="menu-hamburguesa">
+                <!-- div*6 
+                 section>article*6-->
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>Basica</h5>
+                        <button class="btn btn-tarjeta">Ordenar ahora</button>
+                    </div>
+                </article>
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>2 x 1</h5>
+                        <button class="btn btn-tarjeta">Ordenar ahora</button>
+                    </div>
+                </article>
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>Mas vegetales</h5>
+                        <button class="btn btn-tarjeta">Ordenar ahora</button>
+                    </div>
+                </article>
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>Doble carne</h5>
+                        <button class="btn btn-tarjeta">Ordenar ahora</button>
+                    </div>
+                </article>
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>pull burger</h5>
+                        <button class="btn btn-tarjeta">Ordenar ahora</button>
+                    </div>
+                </article>
+                <article class="menu-tarjeta">
+                    <div class="tarjeta">
+                        <h5>Extra Queso</h5>
+                        <button class="btn btn-tarjeta">Ordenar ahora</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+ <!--formulario de contacto-->
+ <section class="contact-section">
+    <h2>Contacto</h2>
+    <form action="/send-message" method="post" class="contact-form">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder=" escribe el nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Correo Electronico</label>
+            <input type="email" id="email" name="email" placeholder="escribe el correo electronico" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefono</label>
+            <input type="text" id="phone" name="phone" placeholder="escribe el telefono" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="3" placeholder=" escribe el mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar</button>
+    </form>
+</section>
+
+     
+
+        
+    </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 TuNombre. Todos los derechos reservados.</p>
+                <p>Municipio del El Porvenir Santa Ana</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><img src="https://image.flaticon.com/icons/svg/2111/2111392.svg" alt="Facebook" class="icon"></a>
+                    <a href="https://www.twitter.com" target="_blank"><img src="https://image.flaticon.com/icons/svg/2111/2111703.svg" alt="Twitter" class="icon"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="https://image.flaticon.com/icons/svg/2111/2111463.svg" alt="Instagram" class="icon"></a>
+                    <a href="https://www.linkedin.com" target="_blank"><img src="https://image.flaticon.com/icons/svg/2111/2111532.svg" alt="LinkedIn" class="icon"></a>
+                <a href="https://wa.me/yourphonenumber" target="_blank"><img src="https://image.flaticon.com/icons/svg/2111/2111728.svg" alt="WhatsApp" class="icon">
+                
+                </div>
+            </div>
+        </footer>
+    
+</body> 
+</html>

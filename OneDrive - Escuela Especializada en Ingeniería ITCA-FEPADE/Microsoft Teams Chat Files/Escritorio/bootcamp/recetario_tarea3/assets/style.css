@@ -1,0 +1,150 @@
+/* Estilos generales para el título */
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilos para el contenedor de la imagen de fondo */
+.imagen {
+    text-align: center;
+    background-image: url("https://res.cloudinary.com/dsrkdnu5y/image/upload/v1722223275/omelette_rhlwhr.png");
+    height: 1000px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Estilos para el texto */
+.text {
+    color: blue;
+}
+
+.omelette {
+    color: black;
+}
+
+/* Estilos para el contenedor de botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+/* Estilos para los botones */
+.btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: left;
+    width: 30%;
+    height: 70px;
+}
+
+/* Estilos para el texto dentro del botón */
+.btn span {
+    display: block;
+    font-size: 0.8em;
+}
+
+/* Estilos para el texto en negrita dentro del botón */
+.btn strong {
+    display: block;
+    font-size: 1.2em;
+}
+
+/* Estilos para el título de los ingredientes */
+.ingredients-title {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilos para cada párrafo en la sección de ingredientes */
+.ingredients-section p {
+    margin: 10px 0; /* Margen superior e inferior de los párrafos */
+    padding: 20px auto;
+    max-width: 90%;
+    
+    
+}
+
+/* Estilos para la sección de instrucciones */
+.instructions-section {
+    max-width: 800px; /* Ancho máximo de la sección */
+    text-align: left;
+    margin: 20px 0;
+    padding: 20px; /* Agrega relleno interno para separación del borde */
+    background-color: #fff; /* Fondo blanco para la sección */
+   border-radius: 8px;
+
+}
+
+/* Estilos para la sección de nutrición */
+.nutrition-section {
+    text-align: left;
+    margin: 20px 0; /* Margen superior e inferior de la sección */
+    padding: 20px; /* Agrega relleno interno para separación del borde */
+    background-color: #fff; /* Fondo blanco para la sección */
+    border-radius: 8px; /* Esquinas redondeadas */
+
+}
+
+.nutrition-title {
+    color: #333;
+    margin-bottom: 15px; /* Margen inferior del título */
+    font-size: 1.5em; /* Tamaño de fuente para el título */
+    font-weight: bold; /* Negrita para el título */
+}
+
+/* Estilos para los párrafos en la sección de nutrición */
+.nutrition-section p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .imagen {
+        height: 300px; /* Reduce la altura de la imagen en pantallas pequeñas */
+        font-size: 1.2rem;
+    }
+
+    .button-container {
+        flex-direction: column; /* Los botones se apilan verticalmente */
+        gap: 5px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: none; /* Elimina el ancho máximo en pantallas pequeñas */
+        font-size: 0.9em; /* Ajusta el tamaño de fuente */
+    }
+    
+    .instructions-section, .nutrition-section {
+        padding: 10px; /* Reduce el relleno interno en pantallas pequeñas */
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (teléfonos en modo retrato) */
+@media (max-width: 480px) {
+    .imagen {
+        height: 200px; /* Ajusta aún más la altura de la imagen */
+        font-size: 1rem; /* Reduce el tamaño de fuente */
+    }
+
+    .btn {
+        font-size: 0.8em; /* Reduce aún más el tamaño de fuente de los botones */
+        height: 60px; /* Ajusta la altura de los botones */
+    }
+}
