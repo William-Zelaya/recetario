@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio de Edades</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        input { margin: 5px 0; }
+        .results { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ingresar Edades de Estudiantes</h1>
+
+        <h2>Turno Mañana (5 estudiantes)</h2>
+        <div id="mañanaInputs"></div>
+
+        <h2>Turno Tarde (6 estudiantes)</h2>
+        <div id="tardeInputs"></div>
+
+        <h2>Turno Noche (11 estudiantes)</h2>
+        <div id="nocheInputs"></div>
+
+        <button onclick="calcularPromedios()">Calcular Promedios</button>
+
+        <div class="results" id="resultados"></div>
+    </div>
+
+    <script>
+        // Función para generar campos de entrada para edades
+        function generarInputs(turno, cantidad) {
+            let container = document.getElementById(`${turno}Inputs`);
+            container.innerHTML = '';
+            for (let i = 1; i <= cantidad; i++) {
+                container.innerHTML += `
+                    <label>Edad ${i} del turno ${turno.charAt(0).toUpperCase() + turno.slice(1)}:</label>
+                    <input type="number" id="${turno}Edad${i}" min="0" step="any"><br>
+                `;
+            }
+        }
+
+        // Función para obtener edades desde los inputs
+        function obtenerEdades(turno, cantidad) {
+            let edades = [];
+            for (let i = 1; i <= cantidad; i++) {
+                let edad = parseFloat(document.getElementById(`${turno}Edad${i}`).value);
+                if (!isNaN(edad) && edad >= 0) {
+                    edades.push(edad);
+                }
+            }
+            return edades;
+        }
+
+        // Función para calcular el promedio de una lista de edades
+        function calcularPromedio(edades) {
+            let suma = edades.reduce((acc, edad) => acc + edad, 0);
+            return suma / edades.length;
+        }
+
+        // Función principal para calcular y mostrar promedios
+        function calcularPromedios() {
+            // Obtener edades de cada turno
+            let edadesManana = obtenerEdades('mañana', 5);
+            let edadesTarde = obtenerEdades('tarde', 6);
+            let edadesNoche = obtenerEdades('noche', 11);
+
+            // Calcular los promedios
+            let promedioManana = calcularPromedio(edadesManana);
+            let promedioTarde = calcularPromedio(edadesTarde);
+            let promedioNoche = calcularPromedio(edadesNoche);
+
+            // Mostrar los resultados
+            let resultados = `
+                <h3>Resultados</h3>
+                <p>Promedio de edades del turno mañana: ${promedioManana.toFixed(2)}</p>
+                <p>Promedio de edades del turno tarde: ${promedioTarde.toFixed(2)}</p>
+                <p>Promedio de edades del turno noche: ${promedioNoche.toFixed(2)}</p>
+            `;
+
+            // Determinar el turno con mayor promedio
+            if (promedioManana > promedioTarde && promedioManana > promedioNoche) {
+                resultados += `<p>El turno mañana tiene el mayor promedio de edades.</p>`;
+            } else if (promedioTarde > promedioManana && promedioTarde > promedioNoche) {
+                resultados += `<p>El turno tarde tiene el mayor promedio de edades.</p>`;
+            } else if (promedioNoche > promedioManana && promedioNoche > promedioTarde) {
+                resultados += `<p>El turno noche tiene el mayor promedio de edades.</p>`;
+            } else {
+                resultados += `<p>Hay un empate en los promedios de edades entre los turnos.</p>`;
+            }
+
+            document.getElementById('resultados').innerHTML = resultados;
+        }
+
+        // Inicializar los inputs
+        generarInputs('mañana', 5);
+        generarInputs('tarde', 6);
+        generarInputs('noche', 11);
+    </script>
+</body>
+</html>

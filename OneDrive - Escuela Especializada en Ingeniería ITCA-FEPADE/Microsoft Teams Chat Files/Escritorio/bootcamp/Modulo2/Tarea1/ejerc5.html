@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Descuentos de Coches</title>
+    <style>
+        /* Estilos para el cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura completa de la ventana */
+            background-color: #f4f4f4; /* Color de fondo para mayor contraste */
+        }
+        /* Estilos para el contenedor del formulario */
+        .container {
+            text-align: center; /* Centra el texto y los elementos dentro del contenedor */
+            background: white; /* Fondo blanco para el formulario */
+            padding: 20px;
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor del formulario */
+            width: 300px; /* Ancho fijo del formulario */
+        }
+        /* Estilos para las etiquetas y campos del formulario */
+        label, select, button {
+            display: block;
+            margin: 10px auto; /* Margen automático para centrar los elementos */
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border-radius: 4px; /* Bordes redondeados del botón */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        }
+        button:hover {
+            background-color: #0056b3; /* Color de fondo al pasar el cursor sobre el botón */
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Descuentos de Coches</h1>
+        
+        <!-- Formulario para seleccionar el coche -->
+        <form id="formulario">
+            <label for="coche">Seleccione el coche:</label>
+            <select id="coche">
+                <option value="" selected disabled>-- Seleccione un coche --</option>
+                <option value="FORD FIESTA">FORD FIESTA</option>
+                <option value="FORD FOCUS">FORD FOCUS</option>
+                <option value="FORD ESCAPE">FORD ESCAPE</option>
+            </select>
+            
+            <button type="button" onclick="calcularDescuento()">Calcular Descuento</button>
+        </form>
+        
+        <!-- Sección para mostrar el resultado -->
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        // Función para calcular el descuento basado en el coche seleccionado
+        function calcularDescuento() {
+            const coche = document.getElementById("coche").value;
+            let descuento;
+
+            // Determinar el porcentaje de descuento basado en el coche seleccionado
+            switch (coche) {
+                case "FORD FIESTA":
+                    descuento = 5;
+                    break;
+                case "FORD FOCUS":
+                    descuento = 10;
+                    break;
+                case "FORD ESCAPE":
+                    descuento = 20;
+                    break;
+                default:
+                    descuento = 0;
+            }
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            if (descuento > 0) {
+                resultadoDiv.textContent = `El coche seleccionado es ${coche}. Se aplicará un descuento del ${descuento}% en la compra.`;
+            } else {
+                resultadoDiv.textContent = "Por favor, seleccione un coche.";
+            }
+        }
+    </script>
+</body>
+</html>
